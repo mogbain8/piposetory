@@ -5,10 +5,10 @@ from random import choice
 sense = SenseHat
 
 
-w (150, 150, 150)
-g (0, 255, 0)
-r (255, 0, 0)
-b (0, 0, 0)
+w = (150, 150, 150)
+g = (0, 255, 0)
+r = (255, 0, 0)
+b = (0, 0, 0)
 
 arrow = [
 e,e,e,w,w,e,e,e,
