@@ -5,7 +5,7 @@ from random import choice
 sense = SenseHat
 
 
-w (255, 255, 255)
+w (150, 150, 150)
 g (0, 255, 0)
 r (255, 0, 0)
 b (0, 0, 0)
@@ -103,3 +103,10 @@ sleep(0.5)
 
 msg = "Your score was %s" % score
 sense.show_message(msg, scroll_speed=0.05, text_colour=[100, 100, 100])
+
+
+
+
+
+
+
