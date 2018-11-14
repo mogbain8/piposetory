@@ -48,9 +48,6 @@ score = 0
 angle = 0
 play = True
 
-sense.show_message("Keep the arrow pointing up", scroll_speed=0.05, text_colour=[100,100,100])
-
-
 while play:
  last_angle = angle
  while angle == last_angle:
