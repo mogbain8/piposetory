@@ -1,35 +1,15 @@
 from sense_hat import SenseHat
-from time import sleep
-from threading import thread
+
 sense = SenseHat()
 
+while True:
+	acceleration = sense.get_accelerometer_raw()
+	x = acceleration['x']
+	y = acceleration['y']
+	z = acceleration['z']
 
-g = (0, 255, 0)
-b = (0, 0, 255)
-dg = (0, 20, 0)
-y = (255, 255, 0)
-bob_pixels = [
-    dg, dg, dg, dg, b, y, y, y,
-    dg, dg, dg, b, b, b, y, y,
-    dg, dg, b, b, b, b, b, y,
-    dg, dg, b, b, b, b, b, b,
-    dg, dg, b, b, b, b, b, b,
-    dg, dg, g, g, g, g, g, g,
-    g, g, g, g, g, g, g, g,
-    g, g, g, g, g, g, g, g
-  ]
-  
-sense.set_pixels(bob_pixels)
+	x=round(x, 0)
+	y=round(y, 0)
+	z=round(z, 0)
 
-def firstFunction():
-    while True:
-       sleep(1)
-    sense.flip_h()()
-
-def secondFunction():
-    while True:
-       sleep(1)
-    sense.flip_v()()
-
-thread.start_new_thread(firstFunction, ())
-thread.start_new_thread(secondFunction, ())
+	print("x={0}, y={1}, z={2}".format(x, y, z))
