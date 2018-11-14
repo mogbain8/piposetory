@@ -1,6 +1,6 @@
 from sense_hat import SenseHat
 from time import sleep
-from threading import Thread
+from threading import thread
 sense = SenseHat()
 
 
@@ -21,20 +21,15 @@ bob_pixels = [
   
 sense.set_pixels(bob_pixels)
 
+def firstFunction():
+    while True:
+       sleep(1)
+    sense.flip_h()()
 
-t1 = Thread(target = firstFunction)
-t2 = Thread(target = secondFunction)
+def secondFunction():
+    while True:
+       sleep(1)
+    sense.flip_v()()
 
-t1.start()
-t2.start()
-
-def firstFunctiion():
-while True:
-    sleep(1)
-    sense.flip_h()
-
-def secondFunction():    
-while True:
-  sleep(1)
-  sense.flip_v()
-  
+thread.start_new_thread(firstFunction, ())
+thread.start_new_thread(secondFunction, ())
