@@ -48,7 +48,7 @@ score = 0
 angle = 0
 play = True
 
-sense.show_message("point the arrow up", scroll_speed=0.05)
+sense.show_message(text_string="point the arrow up", scroll_speed=0.05)
 
 
 
